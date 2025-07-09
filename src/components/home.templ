@@ -1,0 +1,67 @@
+package components
+
+templ Home() {
+    <body class="bg-gray-100" >
+        <div class="flex h-screen">
+            <aside class="w-64 bg-white border-r flex flex-col h-screen">
+                <div class="h-16 flex items-center justify-center border-b">
+                    <span class="text-xl font-bold bg-blue">Notes</span>
+                </div>
+                <nav class="flex-1 px-4 py-6">
+                    <ul class="space-y-2">
+                        <li>
+                            <a hx-get="/" hx-trigger="click" hx-target="main-content" class="block px-4 py-2 rounded hover:bg-gray-200">Dashboard</a>
+                        </li>
+                        <li>
+                            <a hx-get="/notes" hx-trigger="click" hx-target="#main-content" class="block px-4 py-2 rounded hover:bg-gray-200">Notes</a>
+                        </li>
+                        <li>
+                            <a hx-get="/todo" hx-trigger="click" hx-target="#main-content"  class="block px-4 py-2 rounded hover:bg-gray-200">ToDo
+                            </a>
+                        </li>
+                        <!-- Add more menu items as needed -->
+                    </ul>
+                </nav>
+            </aside>
+            <div class="flex-1 flex flex-col">
+                <header class="h-16 bg-white border-b flex items-center justify-between px-6">
+                    <div class="flex items-center space-x-4">
+                        <h1 class="text-2xl font-semibold">Notes</h1>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <form class="relative">
+                            <input type="text" placeholder="Search..." class="pl-8 pr-4 py-2 rounded bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <span class="absolute left-2 top-2 text-gray-400">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                </svg>
+                            </span>
+                        </form>
+                        <div class="flex items-center space-x-2">
+                            <img src="https://i.pravatar.cc/32" alt="Profile" class="w-8 h-8 rounded-full border">
+                            <span class="font-medium">Admin</span>
+                        </div>
+                    </div>
+                </header>
+                <main class="flex-1 p-8" id="main-content">
+                    <p class="m-8">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia lacus ligula, sed venenatis ligula malesuada non. Maecenas pretium leo a risus sollicitudin cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse auctor mi quis quam dapibus tempor. Pellentesque convallis urna ut neque laoreet, nec maximus erat porta. Donec eu consequat ante, in vulputate massa. Pellentesque hendrerit tellus vel metus auctor efficitur. Morbi vestibulum purus eleifend, blandit orci a, suscipit diam. Quisque non tincidunt diam. Aenean nibh felis, scelerisque sit amet mi non, molestie fringilla velit. Pellentesque aliquet rhoncus nulla ac posuere.
+                    </p>
+                    <p class="m-8">
+                        Morbi vel nulla nec lectus pharetra tristique. Nunc id elit quis urna rutrum mollis. Aliquam quis turpis id tellus hendrerit scelerisque non et lorem. Nulla in urna leo. Nulla quis nunc eu leo luctus pharetra. Aliquam et vehicula enim. Mauris finibus a dui vitae vehicula. Phasellus ac purus ut purus blandit viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <p class="m-8">
+                        Aliquam semper condimentum aliquam. Donec a lacus ac sem molestie imperdiet congue efficitur est. Quisque nec libero quis erat interdum laoreet sed nec elit. Aliquam venenatis ex dolor, sed aliquet metus condimentum nec. Suspendisse at interdum nisl, ut ornare purus. Mauris at leo sodales, volutpat augue non, condimentum enim. Proin efficitur, dui eu tristique semper, nibh nisl hendrerit nulla, sit amet euismod tellus eros a quam. Sed vestibulum dictum dignissim. Nunc at lobortis dui, vitae vehicula odio. Maecenas molestie at augue ut venenatis.
+                    </p>
+                    <p class="m-8">
+                        Etiam tortor turpis, luctus eget augue id, rutrum aliquam urna. Aliquam in lectus vel justo blandit congue. Praesent sed sem varius, porta nisl ut, varius sem. Aliquam varius justo id mauris posuere molestie. Sed hendrerit interdum feugiat. Aliquam erat volutpat. Ut a consectetur urna.
+                    </p>
+                    <p class="m-8">
+                        Sed cursus massa nec viverra faucibus. Suspendisse a condimentum quam. Donec eget leo non ante aliquet consectetur at eget odio. Integer vehicula dui quis suscipit cursus. In aliquam nisl lectus, in fringilla odio luctus nec. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam a nisi sollicitudin, pretium ex ut, interdum libero. Pellentesque eget lorem ut orci pellentesque tincidunt non ut nisl. Nunc interdum rutrum eros, id euismod enim sodales a. Maecenas mollis purus magna, eget luctus urna porttitor vel.
+                    </p>
+                </main>
+            </div>
+        </div>
+    </body>
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="light" data-sidebar-size="lg">
+  <head>
+      <meta charset="UTF-8">
+      <title>Notes App</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+      <script src="https://unpkg.com/htmx-remove@latest"
+        integrity="sha384-v6VOSW2F42qo+95FGFDZCY72+0md5SolbibTa8Kgn8DkCrevZNkgTsWXdEMXyeRX"
+        crossorigin="anonymous">
+      </script>
+      <link href="./css/main.css" rel="stylesheet" />
+  </head>
+  <body hx-get="/inbox" hx-swap="outerHTML" hx-trigger="load" id="app">
+    <div class="flex flex-col min-h-screen">
+      <header class="bg-gray-800 text-white p-4">
+        <h1 class="text-2xl">Notes App</h1>
+      </header>
+      <main class="flex-grow p-4">
+        <div id="content" hx-target="#content" hx-swap="innerHTML">
+          <!-- Content will be loaded here -->
+        </div>
+      </main>
+      <footer class="bg-gray-800 text-white p-4 text-center">
+        &copy; 2023 Notes App
+      </footer>
+    </div>
+  </body>
+</html>
